@@ -44,7 +44,7 @@ Make sure monitorwitness.sh is executable using `chmod +x monitorwitness.sh`.
 
 Modify *monitorwitness.env* with your preferred settings and healthcheck URL from above.  The defaults are three popular full nodes with allowing a single failure and a 10 block tolerance.  This means if you are outside of 10 blocks on 2 out of 3 nodes, you will send a heatbeat preventing any notifications.  If you are outside of 10 blocks for 2 or more nodes, you will not send a heartbeat causing an alert.  
 
-**The code will not run unless you add a healthcheck URL to the configuration file. **
+**The code will not run unless you add a healthcheck URL to the configuration file.**
 
 I recommend installing this on all witness nodes, and setting a unique healthcheck URL for each node, idealy with a matching name on Healthchecks.  UptimeRobot supports this sort of monitoring as well, but you need a paid account.   Healthchecks.io allows you 20 free healthchecks.  You can also use UptimeKuma (my favorite) which is an open source clone of Uptime Robot you can host yourself, but is a lot more involved.  Healthchecks.io works really well, is free, and super fast to set up (under 15 seconds to be up and running!).
 
