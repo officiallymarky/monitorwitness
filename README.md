@@ -6,13 +6,17 @@ Monitor Witness is build using completely free tools with no ongoing fees.  Unli
 
 ### How does it work?
 
-Monitor WItness is a relatively simple bash shell script that monitors your witness log file looking for the last block processed, then compares against full nodes to determine if it is within 10 blocks.  If it is, it sends a heart beat, if it isn't, you get notified it is behind or even failed. 
+Monitor Witness is a relatively simple bash shell script that monitors your witness log file looking for the last block processed, then compares against full nodes to determine if it is within 10 blocks.  If it is, it sends a heart beat, if it isn't, you get notified it is behind or even failed. 
 
 First you need an account with HealthChecks, Uptime Robot, or your own Uptime Kuma instance.  Any service that provides ping/heatbeat type of monitors via url will work.
 
 Healthchecks is basically a reverse notification.  Typically when you use notification services, you set a destination service for it to ping or monitor and alert you when it can't be reached.  With a healthcheck, you set up a URL that needs to be visited within a set amount of time, if it is not, then it starts to complain.  It's a dead man's switch, something you probably only heard of in movies.  This is an extremely handy tool for monitoring backup jobs, and other jobs that run and you want to make sure it completely properly but has no external IP to ping or monitor.
 
-### Installation
+### Requirements
+* Curl
+* jq
+
+## Installation
 
 #### Enable Logging
 
